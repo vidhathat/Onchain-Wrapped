@@ -17,7 +17,7 @@ function Login() {
     </div> 
     <div>
       <p className="text-center font-heading lg:text-xl lg:mb-7 text-gray-400">
-        <span className="text-white">500 wallets</span> checked and wrapped in
+        <span className="text-white">50+ wallets</span> checked and wrapped in
         last 1hr
       </p>
       <div className="flex flex-col justify-center items-center lg:overflow-hidden">
