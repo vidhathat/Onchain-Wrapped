@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ['Space Grotesk', 'sans-serif'],
+      },
+      colors: {
+        formfield: '#1E2228', 
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -16,3 +22,4 @@ module.exports = {
   },
   plugins: [],
 }
+
