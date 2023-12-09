@@ -9,6 +9,8 @@ import Card6
  from '@/components/cards/Card6';
 import TopNav from '@/components/TopNav';
 import Loading from '@/components/loading';
+import Head from 'next/head'
+
 
 const Carousel = ({address}) => {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -74,6 +76,9 @@ const Carousel = ({address}) => {
 
     return (
         <div className="min-h-screen p-8  relative"> 
+           <Head>
+      <title>Arbitrum Wrappd</title>
+    </Head>
         <TopNav/>
             <div className="w-64 mx-auto flex justify-center mt-12 mb-4">
                 {slides.map((_, index) => (

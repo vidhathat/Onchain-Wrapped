@@ -23,11 +23,13 @@ console.log(name);
               <div className="w-[278px] h-[177px] justify-center items-start gap-12 inline-flex">
                 <div className="flex-col justify-center items-center gap-4 inline-flex">
                   <div className="flex-col justify-center items-center gap-2 flex">
+                    {cachedUrl?
                     <Image
                     height={92} width={92}
                       className="w-[92px] h-[92px] rounded-xl"
                       src={cachedUrl}
                     />
+                    :""}
                     <p className="text-center text-zinc-400 text-sm font-normal font-heading">
                       {name}
                     </p>

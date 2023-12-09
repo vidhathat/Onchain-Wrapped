@@ -24,7 +24,9 @@ const Card6 = ({percentage, favToken,nftCount,nftData}) => {
       </div>
       <div className="w-52 h-[236px] left-[299px] top-[32px] absolute flex-col justify-start items-start gap-8 inline-flex">
         <div className="justify-start items-center gap-2 inline-flex">
-          <div className="w-8 h-8 bg-gray-800 rounded-full" />
+          <div className="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center" >
+            <img src="/trans.svg" style={{width:'20px', height:"20px"}} alt="" />
+            </div>
           <div className="flex-col justify-center items-start gap-1 inline-flex">
             <div className="text-white text-sm font-bold font-heading leading-none">
               583
