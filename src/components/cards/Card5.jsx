@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'
 
 const Card5 = (nft) => {
   const { nft: { name } } = nft;
@@ -19,10 +20,11 @@ console.log(name);
                 Top ones from the wallet..
               </p>
 
-              <div className="w-[278px] h-[177px] justify-start items-start gap-12 inline-flex">
-                <div className="flex-col justify-start items-center gap-4 inline-flex">
-                  <div className="flex-col justify-start items-center gap-2 flex">
-                    <img
+              <div className="w-[278px] h-[177px] justify-center items-start gap-12 inline-flex">
+                <div className="flex-col justify-center items-center gap-4 inline-flex">
+                  <div className="flex-col justify-center items-center gap-2 flex">
+                    <Image
+                    height={92} width={92}
                       className="w-[92px] h-[92px] rounded-xl"
                       src={cachedUrl}
                     />
@@ -30,7 +32,7 @@ console.log(name);
                       {name}
                     </p>
                   </div>
-                  <div className="flex-col justify-start items-center gap-1 flex">
+                  <div className="flex-col justify-center items-center gap-1 flex">
                     <p className="text-center text-white text-base font-bold font-heading leading-[17.60px]">
                     {floor_price} ARB
                     </p>

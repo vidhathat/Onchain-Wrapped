@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image'
 
 const Card6 = ({percentage, favToken,nftCount,nftData}) => {
-console.log('nftData', nftData)
     return (
         <div className="w-[570px] h-[300px] relative">
       <div className="w-[570px] h-[300px] left-0 top-0 absolute bg-neutral-800" />
@@ -83,7 +83,7 @@ console.log('nftData', nftData)
               </p>
 
               <div className="w-6 h-6 relative">
-                <img src={percentage < 0 ? "./arrow2.svg" : "./arrow.svg"} alt="arrow" />
+                <Image height={24} width={24} src={percentage < 0 ? "/arrow2.svg" : "/arrow.svg"} alt="arrow" />
               </div>
             </div>
           <div className="text-center text-stone-300 text-sm font-normal font-heading whitespace-nowrap">
