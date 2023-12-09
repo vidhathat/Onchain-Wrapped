@@ -17,7 +17,7 @@ const Card2 = () => {
                     Top 
                   </span>
                   <span className="text-emerald-400 text-[32px] font-bold font-heading leading-[38.40px]">
-                    &nbsp; ${percent} Users
+                    &nbsp;{percent}% Users
                   </span>
                   <span className="text-white text-[32px] font-bold font-heading leading-[38.40px]">
                   &nbsp;of <br />
