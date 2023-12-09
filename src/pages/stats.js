@@ -7,6 +7,7 @@ import Card4 from '@/components/cards/Card4';
 import Card5 from '@/components/cards/Card5';
 import Card6
  from '@/components/cards/Card6';
+import TopNav from '@/components/TopNav';
 const Carousel = () => {
     const [activeSlide, setActiveSlide] = useState(0);
     const slides = [
@@ -27,7 +28,8 @@ const Carousel = () => {
 
     return (
         <div className="min-h-screen p-8  relative"> 
-            <div className="w-64 mx-auto flex justify-center mb-4">
+        <TopNav/>
+            <div className="w-64 mx-auto flex justify-center mt-12 mb-4">
                 {slides.map((_, index) => (
                     <div key={index} className={`h-1 flex-1 w-1 mx-1 ${index === activeSlide ? 'bg-green-500' : 'bg-gray-300'}`}></div>
                 ))}
@@ -38,7 +40,7 @@ const Carousel = () => {
                         {Slide}
                     </div>
                 ))}
-                <div className="absolute top-1/2 left-0 right-0 flex justify-between px-48 z-20">
+                <div className="absolute top-1/2 left-0 right-0 flex justify-between px-12 md:px-48 z-20">
                 <button onClick={goToPrevSlide} className="cursor-pointer bg-white rounded-full shadow-md p-2">
                     <svg className="w-6 h-6 text-gray-800" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M15 19l-7-7 7-7"></path>
