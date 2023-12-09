@@ -11,7 +11,12 @@ module.exports = {
         heading: ['Space Grotesk', 'sans-serif'],
       },
       colors: {
-        formfield: '#1E2228', 
+        "formfield": '#1E2228', 
+        "dark-blue": "#1E2228",
+        "neutral-blue": "#21252C",
+        "light-blue": "#252B35",
+        "rose-pink": "#E25376",
+      
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
