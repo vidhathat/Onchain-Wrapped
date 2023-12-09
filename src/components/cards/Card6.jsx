@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Card6 = () => {
-    
+const Card6 = ({percentage, favToken,nftCount,nftData}) => {
+console.log('nftData', nftData)
     return (
         <div className="w-[570px] h-[300px] relative">
       <div className="w-[570px] h-[300px] left-0 top-0 absolute bg-neutral-800" />
@@ -38,10 +38,10 @@ const Card6 = () => {
           <div className="w-8 h-8 bg-gray-800 rounded-full" />
           <div className="flex-col justify-center items-start gap-1 inline-flex">
             <div className="text-white text-sm font-bold font-heading leading-none">
-              Jan
+              {nftCount}
             </div>
             <div className="text-stone-300 text-xs font-normal font-heading whitespace-nowrap">
-              Most Active Month (200 txns)
+              Total NFT's
             </div>
           </div>
         </div>
@@ -49,10 +49,10 @@ const Card6 = () => {
           <div className="w-8 h-8 bg-gray-800 rounded-full" />
           <div className="flex-col justify-center items-start gap-1 inline-flex">
             <div className="text-white text-sm font-bold font-heading leading-none">
-              Mango
+              {favToken}
             </div>
             <div className="text-stone-300 text-xs font-normal font-heading whitespace-nowrap">
-              Most used Protocol (245 txns)
+              Favourite Token
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ const Card6 = () => {
           <div className="w-8 h-8 bg-gray-800 rounded-full" />
           <div className="flex-col justify-center items-start gap-1 inline-flex">
             <div className="text-white text-sm font-bold font-heading leading-none">
-              Battlestar
+              {nftData.contract.name}
             </div>
             <div className="text-stone-300 text-xs font-normal font-heading">
               Most Priced NFT
@@ -71,12 +71,21 @@ const Card6 = () => {
       <div className="w-[174px] h-12 left-[24px] top-[126px] absolute justify-start items-start gap-3 inline-flex">
         <div className="w-12 h-12 bg-neutral-800 rounded-xl" />
         <div className="flex-col justify-center items-start gap-1 inline-flex">
-          <div className="justify-center items-center gap-1 inline-flex">
+          {/* <div className="justify-center items-center gap-1 inline-flex">
             <div className="text-center text-rose-500 text-2xl font-bold font-heading leading-relaxed">
-              25%
+              {percentage}%
             </div>
             <div className="w-6 h-6 relative origin-top-left rotate-180" />
-          </div>
+          </div> */}
+           <div className="justify-center items-center gap-1 inline-flex">
+              <p className={`text-center ${percentage < 0 ? 'text-[#E25376]' : 'text-emerald-400'} text-[32px] font-bold font-heading leading-9`}>
+                {percentage}
+              </p>
+
+              <div className="w-6 h-6 relative">
+                <img src={percentage < 0 ? "./arrow2.svg" : "./arrow.svg"} alt="arrow" />
+              </div>
+            </div>
           <div className="text-center text-stone-300 text-sm font-normal font-heading whitespace-nowrap">
             Portfolio Changes
           </div>

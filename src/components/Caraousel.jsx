@@ -10,24 +10,6 @@ import Card6 from './Card6';
 const Carousel = () => {
     const [activeSlide, setActiveSlide] = useState(0);
     const slides = [
-        // {
-        //     id: 'carousel-1',
-        //     image: 'https://images.unsplash.com/photo-1628788835388-415ee2fa9576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80',
-        //     title: 'Lorem ipsum dolor sit amet consectetur adipisicing.',
-        //     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
-        // },
-        // {
-        //     id: 'carousel-2',
-        //     image: 'https://images.unsplash.com/photo-1628191139360-4083564d03fd?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80',
-        //     title: 'Scelerisque eleifend donec pretium vulputate sapien.',
-        //     description: 'Egestas diam in arcu cursus euismod quis. Fusce id velit ut tortor.'
-        // },
-        // {
-        //     id: 'carousel-3',
-        //     image: 'https://images.unsplash.com/photo-1628718120482-07e03fe361dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80',
-        //     title: 'Consectetur purus ut faucibus pulvinar elementum.',
-        //     description: 'Aliquam ultrices sagittis orci a scelerisque purus semper.'
-        // }
         <Card1/>, <Card2/>, <Card3/>, <Card4/>, <Card5/>, <Card6/>
     ];
 
