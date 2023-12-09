@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'
 
 const Card3 = ({percentage,sent,received}) => {
     return (
@@ -18,7 +19,7 @@ const Card3 = ({percentage,sent,received}) => {
               </p>
 
               <div className="w-6 h-6 relative">
-                <img src={percentage < 0 ? "./arrow2.svg" : "./arrow.svg"} alt="arrow" />
+                <Image height={24} width={24} src={percentage < 0 ? "/arrow2.svg" : "/arrow.svg"} alt="arrow" />
               </div>
             </div>
             <p className="text-center text-white text-xl font-medium font-heading leading-snug">

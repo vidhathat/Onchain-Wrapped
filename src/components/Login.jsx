@@ -2,6 +2,8 @@ import "animate.css";
 import React,{useState} from "react";
 import TopNav from "./TopNav";
 import { useRouter } from 'next/router';
+import Image from 'next/image'
+
 function Login() {
   const [walletID, setWalletID] = useState('');
   const router = useRouter();
@@ -16,7 +18,7 @@ function Login() {
 <div className="flex flex-col items-center">
   <div className="flex">
  <div>  
-    <img className="w-10 h-6 mr-3" src="./wallet-images.png"/>
+    <Image width={40} height={24} className="w-10 h-6 mr-3" src="/wallet-images.png"/>
     </div> 
     <div>
       <p className="text-center font-heading lg:text-xl lg:mb-7 text-gray-400">
@@ -43,8 +45,9 @@ function Login() {
         onChange={(e) => setWalletID(e.target.value)}
       />
         {/* <Link to="/home"> */}
-          <img
-            src="./login.png"
+          <Image
+          width={36} height={36} 
+            src="/login.png"
             alt="Login Icon"
             onClick={handleNavigation}
             className="animate__animated animate__shakeX lg:h-9 lg:w-9 h-7 w-7 mt-5 lg:ml-4 cursor-pointer"

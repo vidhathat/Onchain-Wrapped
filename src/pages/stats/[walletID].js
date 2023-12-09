@@ -60,6 +60,15 @@ const Carousel = ({address}) => {
      <Card4 nftCount={data.nftCount}/>, <Card5 nft={data.nft}/>, <Card6 transactions={data.transactions} favToken={data.favouriteToken} percentage={data.percentage} nftCount={data.nftCount} nftData={data.nft} />
 ];
 
+// const slides = [
+//     data && <Card1 />, 
+//     data?.highestTransaction?.[0] && <Card2 transactions={data?.highestTransaction[0]} />, 
+//     (data?.percentage && data?.arbitrumSent && data?.arbitrumReceived) && <Card3 percentage={data.percentage} sent={data.arbitrumSent} received={data.arbitrumReceived} />, 
+//     data?.nftCount && <Card4 nftCount={data.nftCount} />, 
+//     data?.nft && <Card5 nft={data.nft} />,
+//     (data?.transactions && data?.favouriteToken && data?.percentage && data?.nftCount && data?.nft) && <Card6 transactions={data.transactions} favToken={data.favouriteToken} percentage={data.percentage} nftCount={data.nftCount} nftData={data.nft} />
+//   ].filter(Boolean);
+
 
     return (
         <div className="min-h-screen p-8  relative"> 
