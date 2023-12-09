@@ -15,7 +15,7 @@ module.exports = {
         "dark-blue": "#1E2228",
         "neutral-blue": "#21252C",
         "light-blue": "#252B35",
-        "rose-pink": "#E25376",
+         "rose-pink": "#E25376",
       
       },
       backgroundImage: {
