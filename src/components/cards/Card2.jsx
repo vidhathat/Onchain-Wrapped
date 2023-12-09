@@ -1,7 +1,11 @@
 import React from 'react';
 
-const Card2 = () => {
-    const percent = 10;
+const Card2 = ({transactions}) => {
+  // console.log('transactions are', transactions)
+    const transactionDate = new Date(transactions.metadata.blockTimestamp);
+const month = transactionDate.toLocaleString('default', { month: 'long' });
+const day = transactionDate.getDate();
+
     return (
         <div>
         <div className=" flex  items-center justify-center m-1 w-[530px] h-[500px] bg-dark-blue  ">
@@ -11,19 +15,17 @@ const Card2 = () => {
                 <p className="text-center text-white text-lg font-medium font-heading leading-tight">
                   Looking at your Txns..
                 </p>
-                <p className="text-center">
-                  <span className="text-white text-[32px] font-bold font-heading leading-[38.40px]">
-                    You’re in <br />
-                    Top 
-                  </span>
-                  <span className="text-emerald-400 text-[32px] font-bold font-heading leading-[38.40px]">
-                    &nbsp;{percent}% Users
-                  </span>
-                  <span className="text-white text-[32px] font-bold font-heading leading-[38.40px]">
-                  &nbsp;of <br />
-                    Arbitrum{" "}
-                  </span>
+                <div className="flex-col justify-start items-center gap-2 flex">
+                <div className="justify-center items-center gap-1 inline-flex">
+                
+                </div>
+                <p className="text-center text-white text-xl font-medium font-heading leading-snug">
+                <p>Wow! On {day} {month} You really splurged on <span className="text-emerald-400">{transactions.asset}</span> with a whopping purchase of</p>
                 </p>
+                <p className={`text-center text-emerald-400 text-[32px] font-bold font-heading leading-9`}>
+                    {transactions.value.toFixed(0)} ARB
+                  </p>
+              </div>
               </div>
             </div>
           </div>

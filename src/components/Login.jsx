@@ -1,8 +1,15 @@
 import "animate.css";
-import React from "react";
+import React,{useState} from "react";
 import TopNav from "./TopNav";
-
+import { useRouter } from 'next/router';
 function Login() {
+  const [walletID, setWalletID] = useState('');
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push(`/stats/${walletID}`);
+  };
+
   return (
     <>
 <TopNav/>
@@ -28,15 +35,18 @@ function Login() {
         </div>
       </div>
       <div className="flex lg:flex-row flex-col w-full justify-center lg:items-start items-center">
-        <input
-          type="text"
-          className=" bg-gray-700 mt-4 rounded-3xl lg:p-3 p-1 w-5/6 text-white"
-          placeholder="Enter your Wallet ID"
-        />
+      <input
+        type="text"
+        className=" bg-gray-700 mt-4 rounded-3xl lg:p-3 p-1 w-5/6 text-white"
+        placeholder="Enter your Wallet ID"
+        value={walletID}
+        onChange={(e) => setWalletID(e.target.value)}
+      />
         {/* <Link to="/home"> */}
           <img
             src="./login.png"
             alt="Login Icon"
+            onClick={handleNavigation}
             className="animate__animated animate__shakeX lg:h-9 lg:w-9 h-7 w-7 mt-5 lg:ml-4 cursor-pointer"
           />
         {/* </Link> */}
