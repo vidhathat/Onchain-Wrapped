@@ -2,7 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['nft-cdn.alchemy.com', 'ipfs.io', 'yet-another-domain.com'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
   eslint: {
     ignoreDuringBuilds: true,
