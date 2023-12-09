@@ -11,6 +11,11 @@ function Login() {
   <span className="ml-2 font-heading">ARBITRUM • Wrapped ‘23</span>
 </div>
 <div className="flex flex-col items-center">
+  <div className="flex">
+ <div>  
+    <img className="w-10 h-6 mr-3" src="./wallet-images.png"/>
+    </div> 
+    <div>
       <p className="text-center font-heading lg:text-xl lg:mb-7 text-gray-400">
         <span className="text-white">500 wallets</span> checked and wrapped in
         last 1hr
@@ -23,6 +28,8 @@ function Login() {
         <span className="text-green-400 animate__animated animate__slideInLeft font-heading lg:text-6xl text-3xl">
           2023
         </span>
+        </div>
+        </div>
       </div>
       <div className="flex lg:flex-row flex-col w-full justify-center lg:items-start items-center">
         <input
