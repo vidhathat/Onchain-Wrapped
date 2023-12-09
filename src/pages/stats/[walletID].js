@@ -8,6 +8,8 @@ import Card5 from '@/components/cards/Card5';
 import Card6
  from '@/components/cards/Card6';
 import TopNav from '@/components/TopNav';
+import Loading from '@/components/loading';
+
 const Carousel = ({address}) => {
     const [activeSlide, setActiveSlide] = useState(0);
     const [data, setData] = useState({});
@@ -31,7 +33,7 @@ const Carousel = ({address}) => {
 
   useEffect(() => {
     console.log('inside data')
-    fetch(`http://localhost:3000/api/data/${walletID}`)
+    fetch(`/api/data/${walletID}`)
       .then(response => response.json())
       .then(fetchedData => {
         setData(fetchedData);
@@ -51,7 +53,7 @@ const Carousel = ({address}) => {
 
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading/>;
   }
 
 
